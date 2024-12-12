@@ -1,0 +1,32 @@
+1. Load the Dataset
+
+	- Download the Cleveland heart disease dataset from the UCI Machine Learning Repository titled 'processed.cleveland.data'.
+	- Save this dataset in the same directory as the project code.
+	- Verify that the dataset contains 303 entries and 14 key attributes required for the analysis before continuing.
+
+2. Run the Preprocessing Code
+
+	- Open the Jupyter Notebook file provided in this repository (I_310D_Group_Project_Heart_Disease_Predictors.ipynb).
+	- Execute the preprocessing cells sequentially to clean and prepare the data, which include:
+		- Loading the dataset using Pandas to read the file and convert it into a DataFrame for easier manipulation.
+		- Remove any unnecessary characters, such as newline symbols or question marks.
+		- Handle missing values by deleting rows or imputing data where applicable.
+		- Converting relevant columns to float (predictor variables) or integer types (target variable) for analysis.
+
+3. Split the Dataset
+
+	- Execute the code to split the cleaned dataset into training and testing subsets. This ensures the models can train on one subset and validate predictions on the other.
+
+4. Run the Machine Learning Models
+
+	- Train a logistic regression model (sklearn.linear_model) and an MLP classifier (sklearn.neural_network) on the training data created in step 3.
+	- Evaluate the models' performance using accuracy_score and classification metrics (precision, recall, F1-score) from sklearn.metrics.
+	- Check the output of the classification reports to understand the distribution of correct and incorrect predictions for each model.
+	- Compare the performance of the logistic regression and MLP models, noting strengths and areas for improvement.
+
+5. Conduct Statistical Analysis
+
+	- Calculate Pearson correlation coefficients using scipy.stats for each feature against the target variable.
+	- Identify features with the highest absolute correlation values as the strongest predictors.
+	- Visualize the results with Seaborn and Matplotlib box plots and bar charts for the top features to explore the relationships between features and heart disease status.
+	- Analyze visualizations to understand the distribution of top features across individuals with and without heart disease.
